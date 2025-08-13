@@ -1,0 +1,21 @@
+name: Sample workflow
+
+# we can add run-name with the name of the user
+
+on:
+  push:
+  workflow_dispatch:
+
+# These are permissions for the whole workflow
+# permissions:
+#   contents: read
+
+jobs:
+  build:
+    
+    permissions:
+      contents: read
+    
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
